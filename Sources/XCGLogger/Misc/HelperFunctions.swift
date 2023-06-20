@@ -8,7 +8,7 @@
 //
 
 import Foundation
-import ObjcExceptionBridging
+@_exported import ObjcExceptionBridging
 
 /// Extract the type name from the given object
 ///

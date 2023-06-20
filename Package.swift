@@ -22,14 +22,15 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
+            name: "ObjcExceptionBridging",
+            dependencies: []),
+        .target(
             name: "XCGLogger",
             dependencies: ["ObjcExceptionBridging"]),
         .testTarget(
             name: "XCGLoggerTests",
             dependencies: ["XCGLogger"]),
-        .target(
-            name: "ObjcExceptionBridging",
-            dependencies: []),
+        
     ],
     swiftLanguageVersions: [.v5]
 )
